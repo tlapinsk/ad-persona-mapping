@@ -13,7 +13,10 @@ Python 3.6.3
 
 You will need to start by pulling AD data using PowerShell (or some other method). Personally, I recommend the following PowerShell script
 
-	Get-ADUser -SearchBase "ou=example,ou=example,dc=example,dc=net" -Filter * -Properties * | Select-Object -Property title, department, physicaldeliveryofficename, @{n='MemberOf'; e= { ( $_.memberof | % { (Get-ADObject $_).Name }) -join ";" }} | Sort-Object -Property | export-CSV C:\temp\example.csv
+	Get-ADUser -SearchBase "ou=example,ou=example,dc=example,dc=net" -Filter * -Properties * 
+	| Select-Object -Property title, department, physicaldeliveryofficename, @{n='MemberOf'; e= { ( $_.memberof 
+	| % { (Get-ADObject $_).Name }) -join ";" }} | Sort-Object -Property 
+	| export-CSV C:\temp\example.csv
 
 This will output Job Title, Department, Office, and MemberOf security groups formatted nicely. 
 
