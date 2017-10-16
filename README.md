@@ -6,7 +6,7 @@ Below are quick instructions to help get you started.
 
 ### My Specs
 
-Windows 7
+Windows 7 
 Python 3.6.3
 
 ### PowerShell
