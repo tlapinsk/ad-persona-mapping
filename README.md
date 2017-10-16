@@ -11,7 +11,7 @@ Below are quick instructions to help get you started.
 
 ### PowerShell
 
-You will need to start by pulling AD data using PowerShell (or some other method). Personally, I recommend the following PowerShell script
+You will need to start by pulling AD data using PowerShell (or some other method). Personally, I recommend the following PowerShell script:
 
 	Get-ADUser -SearchBase "ou=example,ou=example,dc=example,dc=net" -Filter * -Properties * 
 	| Select-Object -Property title, department, physicaldeliveryofficename, @{n='MemberOf'; e= { ( $_.memberof 
@@ -42,3 +42,7 @@ Finally, change the `sort_location` names from 91-114.
 Execute persona-mapping.py script via the command line
 
 	python persona-mapping.py
+
+Check out location.csv and job_title.csv to see the results.
+
+If you have any trouble, feel free to reach out at tim.lapinskas@gmail.com.
