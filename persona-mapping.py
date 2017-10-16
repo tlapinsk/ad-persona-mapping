@@ -102,7 +102,7 @@ print(sort_location3)
 
 # Write to CSV
 Locations = [['ALL'], ['LOCATION1'], ['LOCATION2'], ['LOCATION3']]
-with open('out.csv', 'w', newline="") as f:
+with open('location.csv', 'w', newline="") as f:
     writer = csv.writer(f)
     writer.writerows(Locations[0])
     writer.writerows(sort)
@@ -164,6 +164,6 @@ print()
 pprint.pprint(convert_list)
 
 # Write to CSV
-with open('new.csv', 'w', newline="") as f:
+with open('job_title.csv', 'w', newline="") as f:
     writer = csv.writer(f)
     writer.writerows(convert_list)
